@@ -33,9 +33,9 @@ public OnPluginStart()
 	HookEvent("player_disconnect", OnPlayerDisconnect)
 	RegAdminCmd("sm_unreserve", Command_Unreserve, ADMFLAG_BAN, "sm_unreserve - manually force removes the lobby reservation");
 
-	cvarUnreserve = CreateConVar("l4d_unreserve_full", "1", "Automatically unreserve server after a full lobby joins", FCVAR_PLUGIN|FCVAR_SPONLY|FCVAR_NOTIFY);
-	cvarAutoLobby = CreateConVar("l4d_autolobby", "1", "Automatically adjust sv_allow_lobby_connect_only. When lobby full it set to 0, when server empty it set to 1", FCVAR_PLUGIN|FCVAR_SPONLY|FCVAR_NOTIFY);
-	CreateConVar("l4d_unreserve_version", UNRESERVE_VERSION, "Version of the Lobby Unreserve plugin.", FCVAR_PLUGIN|FCVAR_SPONLY|FCVAR_NOTIFY);
+	cvarUnreserve = CreateConVar("l4d_unreserve_full", "1", "Automatically unreserve server after a full lobby joins", FCVAR_SPONLY|FCVAR_NOTIFY);
+	cvarAutoLobby = CreateConVar("l4d_autolobby", "1", "Automatically adjust sv_allow_lobby_connect_only. When lobby full it set to 0, when server empty it set to 1", FCVAR_SPONLY|FCVAR_NOTIFY);
+	CreateConVar("l4d_unreserve_version", UNRESERVE_VERSION, "Version of the Lobby Unreserve plugin.", FCVAR_SPONLY|FCVAR_NOTIFY);
 }
 
 //DDRKhat thanks http://forums.alliedmods.net/showpost.php?p=811533&postcount=76
